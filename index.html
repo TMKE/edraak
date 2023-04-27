@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edraak - إدراك</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style/swiper-bundle.min.css">
+        <link rel="stylesheet" href="style/main.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="images/logo.svg" class="logo">
+                <nav>
+                    <ul id="menuList">
+                        <li><a class="slide-link" href="#aboutUs">Abous us</a></li>
+                        <li><a class="slide-link" href="#whatWeStandFor">What we stand for</a></li>
+                        <li><a class="slide-link" href="#ourMission">Our mission</a></li>
+                        <li><a class="slide-link" href="#ourVision">Our vision</a></li>
+                        <li><a class="slide-link" href="#objectives">Targeted objectives</a></li>
+                    </ul>
+
+                </nav>
+                <button id="navButton" type="button">Contact us<img src="images/arrow-green.svg"></button>
+                <img src="images/menu.svg" class="menu-icon" onclick="togglemenu()">
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <h1>Mind matters</h1>
+                    <p>Mental health is a critical aspect of overall well-being, but it's often overlooked or stigmatized. Our organization is dedicated to changing that. Join us in our mission to prioritize mental health and build a more compassionate world.</p>
+                    <button id="rowButton" type="button">Contact us</button>
+                </div>
+                <div class="col-2">
+                    <p><img src="images/illustration.png" class="illustration"></p>
+                </div>
+                <div class="col-3">
+                    <div id="slides" class="mySwiper">
+                        <div class="slide swiper-wrapper">
+                            <div id="aboutUs" class="slide-content swiper-slide">
+                                <h2>About us</h2>
+                                <p>We’re pressing ‘reset’ on everything people think they know about mental illness. As a non-profit organisation, dedicated to raising awareness about the reality of mental health struggles, we’re using short videos to tell a story. From the dark clouds of depression to drowning in the depths of anxiety, nothing is off-limits.</p>
+                            </div>
+                            <div id="whatWeStandFor" class="slide-content swiper-slide">
+                                <h2>What we stand for</h2>
+                                <p>Simply put, we stand for what’s right – not what’s comfortable, easy, or expected. By being the voice for those who haven’t found theirs, we’re shouting from the rooftops about what we believe in; that mental health issues aren’t something to hide behind closed doors, that we’re all worthy of a life free of mental anguish, and that asking for help is a sign of remarkable strength – not weakness.</p>
+                            </div>
+                            <div id="ourMission" class="slide-content swiper-slide">
+                                <h2>Our mission</h2>
+                                <p>We’re on a mission to challenge perceptions; for those who need a helping hand, those who feel alone in their battle against mental illness, and those who simply don’t understand. Instilling the belief that anybody can get sick, from your closest friend to the person who looks like they have it together, we’re driven by a desire to ignite change across Kuwait – and beyond.</p>
+                            </div>
+                            <div id="ourVision" class="slide-content swiper-slide">
+                                <h2>Our vision</h2>
+                                <p>We envision a future where mental health issues aren’t just accepted. They’re understood; respected; treated just like physical illnesses – with empathy and dignity. By removing feelings of shame from the conversation, creating a culture where those in need can speak openly, and encouraging people to listen, not judge, we hope to break down the stigma, one punch-packing video at a time.</p>
+                            </div>
+                            <div id="objectives" class="slide-content swiper-slide">
+                                <h2>Targeted objectives</h2>
+                                <p>We want to start conversations, showing the next generation that their struggles don’t have to remain a closely guarded secret. Using the power of short films, comprised of thoughtful storytelling and descriptive text, we hope to offer a glimpse into the minds of those battling mental illnesses, putting the spotlight on their day-to-day struggles.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next swiper-buttons"></div>
+                        <div class="swiper-button-prev swiper-buttons"></div>
+                        <!-- <div class="swiper-scrollbar"></div> -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <div class="footer-col">
+                        <h4>Quick links</h4>
+                        <ul>
+                            <li><a class="slide-link" href="#aboutUs">About us</a></li>
+                            <li><a class="slide-link" href="#whatWeStandFor">What we stand for</a></li>
+                            <li><a class="slide-link" href="#ourMission">Our mission</a></li>
+                            <li><a class="slide-link" href="#ourVision">Our vision</a></li>
+                            <li><a class="slide-link" href="#objectives">Targeted objectives</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow us</h4>
+                        <ul>
+                            <li><a href="">Twitter</a></li>
+                            <li><a href="">Facebook</a></li>
+                            <li><a href="">Instagram</a></li>
+                            <li><a href="">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- <img src="images/mark.png" style="width:50%;z-index: -1;"> -->
+        </footer>
+
+        <script src="js/swiper-bundle.min.js">
+
+        </script>
+
+        <script src="js/script.js"></script>
+
+        <script>
+            var menuList = document.getElementById("menuList");
+            menuList.style.maxHeight = "0px";
+
+            function togglemenu() {
+                if (menuList.style.maxHeight == "0px") {
+                    menuList.style.maxHeight = "170px";
+                } else {
+                    menuList.style.maxHeight = "0px";
+                }
+            }
+
+            var slideLinks = document.getElementsByClassName('slide-link');
+
+            for (var i = 0; i < slideLinks.length; i++) {
+              slideLinks[i].addEventListener('click', function(e) {
+                // e.preventDefault();
+
+                // Get the target slide from the link's href attribute
+                var targetSlide = this.getAttribute('href');
+
+                // Get the index of the target slide
+                var slideIndex = document.querySelector(targetSlide).getAttribute('data-swiper-slide-index');
+
+                // Change the active slide to the target slide
+                swiper.slideTo(slideIndex);
+
+                // Focus on the target slide
+                // var targetSlideElement = document.querySelector(targetSlide);
+                // targetSlideElement.focus();
+              });
+            }
+        </script>
+    </body>
+</html>
