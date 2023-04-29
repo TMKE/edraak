@@ -82,6 +82,7 @@ nav ul li a:hover {
 .col-1 h1 {
     font-size: 54px;
     color: #FFFFFF;
+    margin-top: 50px;
 }
 
 .col-1 p {
@@ -212,20 +213,28 @@ button:hover {
 }
 
 .footer-container {
-    padding: 8%;
+    padding: 2% 8%;
 }
 
 .footer-row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .footer ul {
     list-style: none;
 }
 
+.footer-col ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
 .footer-col {
-    width: 25%;
+    /* width: 25%; */
     padding: 0 30px;
     line-height: 1.5;
 }
@@ -251,7 +260,6 @@ button:hover {
 
 .footer-col ul li a:hover {
     color: #9aba9f;
-    padding-left: 10px;
 }
 
 .footer {
@@ -262,14 +270,46 @@ button:hover {
     background-color: #0c2d26;
 }
 
+.change-language {
+    text-decoration: underline;
+    font-size: 13px;
+    color: #9aba9f;
+}
+
+.change-language:hover {
+    color: #FFFFFF;
+}
+
 
 @media only screen and (max-width:700px) {
+    .change-language {
+        font-size: 11px;
+    }
+
+    .footer-container {
+        padding: 4% 4%;
+    }
+
+    .footer-col ul li a {
+        font-size: 12px;
+    }
+
+    .footer-col ul li {
+        margin: 0 10px;
+    }
+
+    .footer-col h4 {
+        font-size: 16px;
+    }
+
     .footer {
         background-size: 250%;
     }
+    
     .footer-col {
         width: 100%;
     }
+
     .swiper-buttons {
         display: none;
     }
