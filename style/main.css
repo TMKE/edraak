@@ -281,10 +281,17 @@ button:hover {
 }
 
 .language-indicator {
+    text-align: center;
     color: #9aba9f;
     font-size: 14px;
     margin-left: 20px;
     margin-right: 20px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.language-indicator:hover {
+    color: #FFFFFF;
 }
 
 .flag {
